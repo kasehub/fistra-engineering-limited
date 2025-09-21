@@ -460,7 +460,8 @@
         }
         
         .form-group input,
-        .form-group textarea {
+        .form-group textarea,
+        .form-group select {
             width: 100%;
             padding: 12px;
             border: 1px solid #ddd;
@@ -628,7 +629,7 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="Services.html">Services</a></li>
-                    <li><a href="Project.html">Projects</a></li>
+                    <li><a href="Projects.html">Projects</a></li>
                     <li><a href="About.html">About</a></li>
                     <li><a href="Blog.html">Blog</a></li>
                     <li><a href="Contact.html">Contact Us</a></li>
@@ -661,6 +662,7 @@
                     <div class="service-content">
                         <h3>Structural Engineering</h3>
                         <p>Advanced structural analysis and design for buildings, bridges, and special structures using the latest technologies and methodologies.</p>
+                        <a href="Services.html#structural" class="btn btn-outline">Learn More</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -670,6 +672,7 @@
                     <div class="service-content">
                         <h3>Fire Engineering</h3>
                         <p>Comprehensive fire safety solutions including risk assessment, evacuation planning, and fire-resistant design to protect people and property.</p>
+                        <a href="Services.html#fire" class="btn btn-outline">Learn More</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -679,6 +682,7 @@
                     <div class="service-content">
                         <h3>Forensic Engineering</h3>
                         <p>Expert investigation and analysis of structural failures and fire incidents to determine causes and prevent future occurrences.</p>
+                        <a href="Services.html#forensic" class="btn btn-outline">Learn More</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -688,6 +692,7 @@
                     <div class="service-content">
                         <h3>Research & Development</h3>
                         <p>Innovative research in structural and fire engineering to develop new solutions and advance industry knowledge.</p>
+                        <a href="Services.html#research" class="btn btn-outline">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -723,6 +728,9 @@
                         <p>Design and analysis of innovative cable-stayed bridge</p>
                     </div>
                 </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="Projects.html" class="btn">View All Projects</a>
             </div>
         </div>
     </section>
@@ -809,7 +817,7 @@
                         <div class="blog-meta">June 15, 2023 | Structural Engineering</div>
                         <h3>Advances in Seismic Design for High-Rise Buildings</h3>
                         <p>Exploring the latest technologies and methodologies making buildings safer in earthquake-prone regions.</p>
-                        <a href="Blog.html" class="btn btn-outline">Read More</a>
+                        <a href="Blog.html#seismic" class="btn btn-outline">Read More</a>
                     </div>
                 </div>
                 <div class="blog-card">
@@ -820,7 +828,7 @@
                         <div class="blog-meta">May 28, 2023 | Fire Engineering</div>
                         <h3>Innovations in Fire-Resistant Materials</h3>
                         <p>How new materials are revolutionizing fire safety in construction and improving protection for occupants.</p>
-                        <a href="Blog.html" class="btn btn-outline">Read More</a>
+                        <a href="Blog.html#materials" class="btn btn-outline">Read More</a>
                     </div>
                 </div>
                 <div class="blog-card">
@@ -831,9 +839,12 @@
                         <div class="blog-meta">April 12, 2023 | Sustainability</div>
                         <h3>Sustainable Structural Design Principles</h3>
                         <p>Integrating environmental considerations into structural engineering for a more sustainable built environment.</p>
-                        <a href="Blog.html" class="btn btn-outline">Read More</a>
+                        <a href="Blog.html#sustainability" class="btn btn-outline">Read More</a>
                     </div>
                 </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="Blog.html" class="btn">View All Articles</a>
             </div>
         </div>
     </section>
@@ -851,14 +862,14 @@
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
                             <h3>Location</h3>
-                            <p>123 Engineering Way, Tech City, TC 10101</p>
+                            <p>Head Office: Lusaka, Zambia</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
                         <div>
                             <h3>Phone</h3>
-                            <p>+1 (555) 123-4567</p>
+                            <p>+260 960 930 466</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -876,9 +887,21 @@
                             <p>Saturday: 9:00 AM - 1:00 PM</p>
                         </div>
                     </div>
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <div>
+                            <h3>Follow Us</h3>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="contact-form">
-                    <form>
+                    <form id="contactForm">
                         <div class="form-group">
                             <label for="name">Your Name</label>
                             <input type="text" id="name" required>
@@ -888,8 +911,15 @@
                             <input type="email" id="email" required>
                         </div>
                         <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" required>
+                            <label for="service">Service Interested In</label>
+                            <select id="service">
+                                <option value="">Select a service</option>
+                                <option value="structural">Structural Engineering</option>
+                                <option value="fire">Fire Engineering</option>
+                                <option value="forensic">Forensic Engineering</option>
+                                <option value="research">Research & Development</option>
+                                <option value="other">Other</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="message">Your Message</label>
@@ -921,7 +951,7 @@
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="Services.html">Services</a></li>
-                        <li><a href="Project.html">Projects</a></li>
+                        <li><a href="Projects.html">Projects</a></li>
                         <li><a href="About.html">About Us</a></li>
                         <li><a href="Blog.html">Blog</a></li>
                         <li><a href="Contact.html">Contact</a></li>
@@ -930,22 +960,18 @@
                 <div class="footer-col">
                     <h3>Services</h3>
                     <ul class="footer-links">
-                        <li><a href="Services.html">Structural Engineering</a></li>
-                        <li><a href="Services.html">Fire Engineering</a></li>
-                        <li><a href="Services.html">Forensic Engineering</a></li>
-                        <li><a href="Services.html">Research & Development</a></li>
+                        <li><a href="Services.html#structural">Structural Engineering</a></li>
+                        <li><a href="Services.html#fire">Fire Engineering</a></li>
+                        <li><a href="Services.html#forensic">Forensic Engineering</a></li>
+                        <li><a href="Services.html#research">Research & Development</a></li>
                         <li><a href="Services.html">Consultation</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Newsletter</h3>
-                    <p>Subscribe to our newsletter for updates on our latest projects and engineering insights.</p>
-                    <form>
-                        <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
-                        </div>
-                        <button type="submit" class="btn">Subscribe</button>
-                    </form>
+                    <h3>Certifications</h3>
+                    <p>Fistra Engineering is certified and accredited by leading international engineering bodies and regulatory authorities.</p>
+                    <img src="https://via.placeholder.com/120x60?text=Certification" alt="Certification" style="margin-top: 15px;">
+                    <img src="https://via.placeholder.com/120x60?text=Accreditation" alt="Accreditation" style="margin-top: 15px;">
                 </div>
             </div>
             <div class="copyright">
@@ -968,6 +994,13 @@
             if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
                 nav.classList.remove('active');
             }
+        });
+
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message. We will get back to you soon!');
+            this.reset();
         });
     </script>
 </body>
